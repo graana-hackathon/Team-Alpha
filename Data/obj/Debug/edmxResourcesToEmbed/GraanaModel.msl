@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TrainingModelStoreContainer" CdmEntityContainer="TrainingEntities">
+    <EntitySetMapping Name="PricebookGraanas">
+      <EntityTypeMapping TypeName="TrainingModel.PricebookGraana">
+        <MappingFragment StoreEntitySet="PricebookGraana">
+          <ScalarProperty Name="Tech_Notes" ColumnName="Tech Notes" />
+          <ScalarProperty Name="MEMBER" ColumnName="MEMBER" />
+          <ScalarProperty Name="VALUE" ColumnName="VALUE" />
+          <ScalarProperty Name="STANDARD" ColumnName="STANDARD" />
+          <ScalarProperty Name="TIME" ColumnName="TIME" />
+          <ScalarProperty Name="HR_RATE" ColumnName="HR RATE" />
+          <ScalarProperty Name="MATERIAL" ColumnName="MATERIAL" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Taskno" ColumnName="Taskno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SearchByString" FunctionName="TrainingModel.Store.SearchByString">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TrainingModel.SearchByString_Result">
+          <ScalarProperty Name="Taskno" ColumnName="Taskno" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="HR_RATE" ColumnName="HR RATE" />
+          <ScalarProperty Name="TIME" ColumnName="TIME" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

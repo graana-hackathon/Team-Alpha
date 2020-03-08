@@ -1,0 +1,14 @@
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\bin\Debug\Core.dll.config
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\bin\Debug\Core.dll
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\bin\Debug\Core.pdb
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\bin\Debug\Data.dll
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\bin\Debug\EntityFramework.dll
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\bin\Debug\Data.pdb
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\bin\Debug\Data.dll.config
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\bin\Debug\EntityFramework.xml
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\obj\Debug\Core.csprojAssemblyReference.cache
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\obj\Debug\Core.csproj.CopyComplete
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\obj\Debug\Core.dll
+C:\Users\ameer\source\repos\GraanaHackathonServer\Core\obj\Debug\Core.pdb

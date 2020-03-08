@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TrainingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PricebookGraana">
+    <Key>
+      <PropertyRef Name="Taskno" />
+    </Key>
+    <Property Name="Taskno" Type="float" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Category" Type="nvarchar" MaxLength="255" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+    <Property Name="MATERIAL" Type="float" />
+    <Property Name="HR RATE" Type="float" />
+    <Property Name="TIME" Type="float" />
+    <Property Name="STANDARD" Type="float" />
+    <Property Name="VALUE" Type="float" />
+    <Property Name="MEMBER" Type="float" />
+    <Property Name="Tech Notes" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <Function Name="SearchByString" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SearchString" Type="varchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="TrainingModelStoreContainer">
+    <EntitySet Name="PricebookGraana" EntityType="Self.PricebookGraana" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
