@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TrainingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PricebookGraana">
+          <Key>
+            <PropertyRef Name="Taskno" />
+          </Key>
+          <Property Name="Taskno" Type="float" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Category" Type="nvarchar" MaxLength="255" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="255" />
+          <Property Name="MATERIAL" Type="float" />
+          <Property Name="HR RATE" Type="float" />
+          <Property Name="TIME" Type="float" />
+          <Property Name="STANDARD" Type="float" />
+          <Property Name="VALUE" Type="float" />
+          <Property Name="MEMBER" Type="float" />
+          <Property Name="Tech Notes" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <Function Name="SearchByString" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SearchString" Type="varchar(max)" Mode="In" />
+        </Function>
+        <EntityContainer Name="TrainingModelStoreContainer">
+          <EntitySet Name="PricebookGraana" EntityType="Self.PricebookGraana" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TrainingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TrainingEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="PricebookGraanas" EntityType="TrainingModel.PricebookGraana" />
+          <FunctionImport Name="SearchByString" ReturnType="Collection(TrainingModel.SearchByString_Result)">
+            <Parameter Name="SearchString" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="PricebookGraana">
+          <Key>
+            <PropertyRef Name="Taskno" />
+          </Key>
+          <Property Name="Taskno" Type="Double" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Category" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MATERIAL" Type="Double" />
+          <Property Name="HR_RATE" Type="Double" />
+          <Property Name="TIME" Type="Double" />
+          <Property Name="STANDARD" Type="Double" />
+          <Property Name="VALUE" Type="Double" />
+          <Property Name="MEMBER" Type="Double" />
+          <Property Name="Tech_Notes" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="SearchByString_Result">
+          <Property Type="Double" Name="Taskno" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="DESCRIPTION" Nullable="true" MaxLength="255" />
+          <Property Type="Double" Name="HR_RATE" Nullable="true" />
+          <Property Type="Double" Name="TIME" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TrainingModelStoreContainer" CdmEntityContainer="TrainingEntities" >
+          <EntitySetMapping Name="PricebookGraanas">
+            <EntityTypeMapping TypeName="TrainingModel.PricebookGraana">
+              <MappingFragment StoreEntitySet="PricebookGraana">
+                <ScalarProperty Name="Tech_Notes" ColumnName="Tech Notes" />
+                <ScalarProperty Name="MEMBER" ColumnName="MEMBER" />
+                <ScalarProperty Name="VALUE" ColumnName="VALUE" />
+                <ScalarProperty Name="STANDARD" ColumnName="STANDARD" />
+                <ScalarProperty Name="TIME" ColumnName="TIME" />
+                <ScalarProperty Name="HR_RATE" ColumnName="HR RATE" />
+                <ScalarProperty Name="MATERIAL" ColumnName="MATERIAL" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Taskno" ColumnName="Taskno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SearchByString" FunctionName="TrainingModel.Store.SearchByString">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="TrainingModel.SearchByString_Result">
+                <ScalarProperty Name="Taskno" ColumnName="Taskno" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="HR_RATE" ColumnName="HR RATE" />
+                <ScalarProperty Name="TIME" ColumnName="TIME" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
