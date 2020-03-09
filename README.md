@@ -26,4 +26,4 @@ Front-End is made on react-native. In order to run the project you need to insta
 
 > `npx react-native run-android'
 
-We have made an API but it is not on some live server so we used the API of team ASH just to show that everything is working fine.
+We have made an API but it is not on some live server so we used the API of team ASH(with their consent) just to show that everything is working fine.
