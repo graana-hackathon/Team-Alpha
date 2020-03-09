@@ -1,7 +1,8 @@
 # Team-Alpha
 
 
-|Team Member| Role |
+|Team Member | Role |
+|---|---|
 |Ameer Hamza | Backend (Lead) |
 |Hassan Javed | Front-End |
 
