@@ -16,7 +16,9 @@ This is the api for the search app developed in ASP.Net It Contains three sub pr
 3.Web
 
 Web Project is the entry point of the api which will communicate with Core which contains the business logic and it will then call Data project to Commmunicate with the Database.
-It is a layered Pattern Called Repository Pattern. We have used MSSQL as a database and used an Excel File as a basis for our data.  
+It is a layered Pattern Called Repository Pattern. We have used MSSQL as a database and used an Excel File as a basis for our data. 
+
+In order to run the api downlaod the project and open IIS Server and publish the api on that server once it is configured you can use the api for data retrival.
 
 
 ## Front End
